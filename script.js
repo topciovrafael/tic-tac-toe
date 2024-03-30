@@ -93,10 +93,32 @@ let tura=0;
 
 })})    
 }
-
-
-
 function gameOver(){
+    let patrat1=document.getElementById("celula-1").innerHTML;
+    let patrat2=document.getElementById("celula-2").innerHTML;
+    let patrat3=document.getElementById("celula-3").innerHTML;
+    let patrat4=document.getElementById("celula-4").innerHTML;
+    let patrat5=document.getElementById("celula-5").innerHTML;
+    let patrat6=document.getElementById("celula-6").innerHTML;
+    let patrat7=document.getElementById("celula-7").innerHTML;
+    let patrat8=document.getElementById("celula-8").innerHTML;
+    let patrat9=document.getElementById("celula-9").innerHTML;
+    if ((patrat1 && patrat1 === patrat2 && patrat2 === patrat3) ||
+    (patrat4 && patrat4 === patrat5 && patrat5 === patrat6) ||
+    (patrat7 && patrat7 === patrat8 && patrat8 === patrat9) ||
+    (patrat1 && patrat1 === patrat4 && patrat4 === patrat7) ||
+    (patrat2 && patrat2 === patrat5 && patrat5 === patrat8) ||
+    (patrat3 && patrat3 === patrat6 && patrat6 === patrat9) ||
+    (patrat1 && patrat1 === patrat5 && patrat5 === patrat9) ||
+    (patrat3 && patrat3 === patrat5 && patrat5 === patrat7)) 
+    {
+    return true; 
+    }
+    else return false;
+}
+
+
+function gameOver2(){
     let patrat1=document.getElementById("celula-1").innerHTML;
     let patrat2=document.getElementById("celula-2").innerHTML;
     let patrat3=document.getElementById("celula-3").innerHTML;
@@ -122,8 +144,9 @@ function gameOver(){
     patrat4 && patrat5 && patrat6 &&
     patrat7 && patrat8 && patrat9
     ){
-        return false;
+        return true;
     }
+    else return false;
 }
 
 
@@ -158,8 +181,8 @@ let tura=0;
 
     let numere=[1,2,3,4,5,6,7,8,9];
     patrate.forEach((patrat)=>{patrat.addEventListener("click", function(event){
-    if(!gameOver()){  
-        if (gameOver()) {
+    if(!gameOver2()){  
+        if (gameOver2()) {
             document.getElementById("gata").innerText = `Game over!`;
             document.getElementById("buttonnou").innerText ="RESTART";
             document.getElementById("menu").innerText="MAIN MENU";
@@ -198,7 +221,7 @@ let tura=0;
         if(patrat.id=="celula-9"){
             numere[8]=0;
         }
-        if (gameOver()) {
+        if (gameOver2()) {
             document.getElementById("gata").innerText = `Game over!`;
             document.getElementById("buttonnou").innerText ="RESTART";
             document.getElementById("menu").innerText="MAIN MENU";
