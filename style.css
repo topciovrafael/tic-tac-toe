@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro{
+    font-family: "Gamja Flower", sans-serif;
+    color: white;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+ 
+
+button{
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+
+button:hover{
+    background: linear-gradient(to bottom right, #d83553, #e98648);
+    transition: 0.5s;
+}
+
+.celula{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border: 4px solid black;
+    margin: 1%;
+    border-radius: 20%;
+    user-select: none;
+}
+
+
+.rand{
+    width: 35%;
+    height: 20%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin: 0.5%;
+}
+#joc{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.celula:hover{
+    cursor: pointer;
+    scale: 1.05;
+    border: 4px solid rgb(126, 0, 69);
+    transition: 0.4s;
+}
+
+.celula:not(:hover){
+    scale: 1;
+    transition: 0.4s;
+}
+
+img{
+    width: 90%;
+    height: auto;
+    -webkit-user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#numedoi{
+    margin-bottom: 10px;
+}
+
+.input {
+    border: 2px solid transparent;
+    width: 15em;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    transition: all 0.5s;
+  }
+  
+  .input:hover,
+  .input:focus {
+    border: 2px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+  }
+
+  #menu{
+    margin-top: 1%;
+  }
